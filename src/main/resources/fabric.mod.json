@@ -1,0 +1,33 @@
+{
+	"schemaVersion": 1,
+	"id": "horn_effects",
+	"version": "${version}",
+	"name": "Horn Effects",
+	"description": "Blow a goat horn to get a short buff for you and your friends.",
+	"authors": ["Lbostani"],
+	"contact": {},
+	"license": "CC0-1.0",
+	"icon": "assets/horn_effects/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.lbostani.horneffects.HornEffects"
+		],
+		"client": [
+			"com.lbostani.horneffects.client.HornEffectsClient"
+		]
+	},
+	"mixins": [
+		"horn_effects.mixins.json",
+		{
+			"config": "horn_effects.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
